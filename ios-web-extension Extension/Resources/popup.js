@@ -8,6 +8,7 @@ document.getElementById("eth-button").addEventListener("click", function(e) {
       console.log("tab id: ", currTab.id);
       if (currTab) {
           browser.tabs.sendMessage(currTab.id,{'ethButtonClicked': true});
+          window.close();
       }
     });
     

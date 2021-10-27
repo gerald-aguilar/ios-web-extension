@@ -4,6 +4,10 @@
 
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log("Received request: ", request);
+    if(request.ethButtonClicked === true){
+        document.getElementById("Eth-Address").value = "geraldaguilar.eth";
+    }
+    
 });
 
 
